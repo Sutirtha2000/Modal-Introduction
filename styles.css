@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+}
+
+body {
+    background-image: url('project-2.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+}
+
+#open-btn {
+    position: absolute;
+    top: 70%;
+    left: 10%;
+    width: 350px;
+    height: 80px;
+    font-size: 2rem;
+    background: transparent;
+    color: white;
+    border-radius: 10px;
+    padding: 5px;
+    border: solid 2px #fff;
+    box-shadow: 0 0 3px black;
+    transition: .5s;
+}
+
+#open-btn:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+#modal {
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 100px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    animation-name: animatemodal;
+    animation-duration: .4s;
+}
+
+#close-btn {
+    font-size: 3rem;
+    cursor: pointer;
+    font-size: 3rem;
+    color: red;
+}
+
+#modal-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(0,0,0, .2);
+}
+
+@keyframes animatemodal {
+    0% {
+        top: -300px;
+        opacity: 0;
+    }
+
+    100% {
+        top: 50%;
+        opacity: 1;
+    }
+}
